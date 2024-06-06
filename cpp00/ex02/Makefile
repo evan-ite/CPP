@@ -5,32 +5,49 @@
 #                                                     +:+ +:+         +:+      #
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/04 12:51:33 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/05 15:14:16 by elisevanite      ###   ########.fr        #
+#    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
+#    Updated: 2024/06/06 16:32:02 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = g++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+NAME		= account
 
-TARGET = account
+CC			= g++
+FLAGS		= -Wall -Wextra -Werror
+RM			= rm -rf
 
-SRCS =
+OBJDIR = .objFiles
 
-OBJS = $(SRCS:.cpp=.o)
+FILES		= tests Account
 
-.PHONY: all clean build run
+SRC			= $(FILES:=.cpp)
+OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
+HEADER		= Account.hpp
 
-all: clean build
+#Colors:
+GREEN		=	\e[92;5;118m
+YELLOW		=	\e[93;5;226m
+RESET		=	\e[0m
+
+.PHONY: all clean fclean re bonus norm
+
+all: $(NAME)
+
+$(NAME): $(OBJ) $(HEADER)
+	@$(CC) $(OBJ) -o $(NAME)
+	@printf "$(GREEN)Executable ready.$(RESET)\n"
+
+$(OBJDIR)/%.o: %.cpp $(HEADER)
+	@mkdir -p $(dir $@)
+	@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJS) $(TARGET)
+	@$(RM) $(OBJDIR) $(OBJ)
+	@$(RM) compare output.log
+	@printf "$(YELLOW)Object files removed.$(RESET)\n"
 
-build: $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
+fclean: clean
+	@$(RM) $(NAME)
+	@printf "$(YELLOW)Executable removed.$(RESET)\n"
 
-run: build
-	./$(TARGET)
-
-$(OBJS): $(SRCS)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+re: fclean all
