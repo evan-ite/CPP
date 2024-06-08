@@ -6,7 +6,7 @@
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/08 09:04:52 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/08 13:54:52 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ FILES		= main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		= 
+HFILES		=
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:
@@ -44,6 +44,7 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 
 clean:
 	@$(RM) $(OBJDIR) $(OBJ)
+	@$(RM) *.replace
 	@printf "$(YELLOW)Object files removed.$(RESET)\n"
 
 fclean: clean
