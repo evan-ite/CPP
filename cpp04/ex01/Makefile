@@ -6,11 +6,11 @@
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/13 14:25:10 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/13 14:45:50 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= letsgo
+NAME		= animaltime
 
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= ClapTrap main
+FILES		= Animal Cat Dog Brain main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		= ClapTrap
+HFILES		= Animal Cat Dog Brain
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:

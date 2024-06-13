@@ -6,14 +6,14 @@
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/10 12:35:32 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/13 14:25:06 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= fixed
 
 CC			= g++
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 OBJDIR = .objFiles

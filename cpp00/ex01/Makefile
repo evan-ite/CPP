@@ -6,14 +6,14 @@
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:25 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/06 15:25:27 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/13 14:23:58 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= phonebook
 
 CC			= g++
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 OBJDIR = .objFiles

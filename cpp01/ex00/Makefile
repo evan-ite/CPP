@@ -6,14 +6,14 @@
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/07 15:51:43 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/13 14:24:15 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= zombie
 
 CC			= g++
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 OBJDIR = .objFiles
