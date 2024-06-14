@@ -6,7 +6,7 @@
 /*   By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:59:41 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/13 15:34:02 by elisevanite      ###   ########.fr       */
+/*   Updated: 2024/06/14 12:01:14 by elisevanite      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Animal::Animal()
 
 Animal::Animal(const Animal &copy)
 {
-	_type = copy.getType();
+	*this = copy;
 	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
 }
 
@@ -67,4 +67,8 @@ void Animal::setIdea(int i, std::string idea) {
 	(void)i;
 	(void)idea;
 	return ;
+}
+
+void Animal::setType(std::string type) {
+	_type = type;
 }

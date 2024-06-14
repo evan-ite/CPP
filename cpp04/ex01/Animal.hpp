@@ -6,7 +6,7 @@
 /*   By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:59:44 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/13 15:14:47 by elisevanite      ###   ########.fr       */
+/*   Updated: 2024/06/14 12:00:47 by elisevanite      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ class Animal
 		virtual void makeSound(void) const;
 		virtual std::string getIdea(int i) const;
 		virtual void setIdea(int i, std::string idea);
-		
+		void setType(std::string type);
+
+
 	private:
 		std::string _type;
 

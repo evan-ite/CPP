@@ -6,7 +6,7 @@
 /*   By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:59:28 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/13 15:26:35 by elisevanite      ###   ########.fr       */
+/*   Updated: 2024/06/14 12:01:36 by elisevanite      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Cat::Cat() : Animal("Cat") {
 }
 
 Cat::Cat(const Cat &copy) {
+	setType(copy.getType());
 	_brain = new Brain(*(copy.getBrain()));
 	std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
 }
