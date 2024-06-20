@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
+#    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/13 14:25:15 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/20 15:47:03 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= letsgo
 
-CC			= g++
+CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 

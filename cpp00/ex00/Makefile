@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
+#    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 12:51:33 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/04 13:22:37 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/06/20 15:47:03 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = g++
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 TARGET = megaphone
