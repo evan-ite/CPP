@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 13:42:42 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 13:42:43 by evan-ite         ###   ########.fr       */
+/*   Created: 2024/07/04 13:43:27 by evan-ite          #+#    #+#             */
+/*   Updated: 2024/07/04 15:21:37 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include <string>
+# include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -26,7 +29,7 @@ class Bureaucrat
 		// Constructors
 		Bureaucrat();
 		Bureaucrat(const Bureaucrat &copy);
-		Bureaucrat(std::string name, int grade);
+		Bureaucrat(const std::string &name, int grade);
 
 		// Destructor
 		~Bureaucrat();
@@ -40,15 +43,22 @@ class Bureaucrat
 
 		void incrementGrade(void);
 		void decrementGrade(void);
+		void signForm(AForm &form) const;
+		void executeForm(AForm const &form);
 
-		class GradeTooHighException : public std::exception {
+		class GradeException : public std::exception {
+			public:
+				virtual const char* what() const throw() = 0;
+		};
+		
+		class GradeTooHighException : public GradeException {
 			public:
 				const char* what() const throw() {
 					return "Grade too high!";
 				}
 		};
 
-		class GradeTooLowException : public std::exception {
+		class GradeTooLowException : public GradeException {
 			public:
 				const char* what() const throw() {
 					return "Grade too low!";

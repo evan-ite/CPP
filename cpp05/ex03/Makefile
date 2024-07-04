@@ -6,11 +6,11 @@
 #    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/07/04 13:43:07 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/07/04 16:30:20 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= ex01
+NAME		= ex03
 
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= Bureaucrat Form main
+FILES		= Intern Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		= Bureaucrat Form
+HFILES		= Intern Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:
@@ -43,7 +43,7 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJDIR) $(OBJ)
+	@$(RM) $(OBJDIR) $(OBJ) *_shrubbery
 	@printf "$(YELLOW)Object files removed.$(RESET)\n"
 
 fclean: clean
