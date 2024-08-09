@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:43:23 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 15:36:40 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:18:12 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy): _name(copy.getName()), _grade(co
 	std::cout << "\e[0;33mCopy Constructor called of Bureaucrat\e[0m" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const std::string &name, int grade)
+Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name)
 {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	_name = name;
 	_grade = grade;
 	std::cout << "\e[0;33mFields Constructor called of Bureaucrat\e[0m" << std::endl;
 }
@@ -45,8 +44,8 @@ Bureaucrat::~Bureaucrat()
 // Operators
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat &assign)
 {
-	_name = assign.getName();
-	_grade = assign.getGrade();
+	if (this != &assign)
+		_grade = assign.getGrade();
 	return *this;
 }
 
@@ -98,6 +97,6 @@ void Bureaucrat::executeForm(AForm const &form) {
 		form.execute(*this);
 		std::cout << "Bureaucrat " << _name << " executed " << form.getName() << std::endl;
 	} catch (AForm::FormException &e) {
-		std::cout << e.what() << std::endl;
+		std::cout << "Bureaucrat " << _name << " could NOT execute " << form.getName() << " because " << e.what() << std::endl;
 	}
 }

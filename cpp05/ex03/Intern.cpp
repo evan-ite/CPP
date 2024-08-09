@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 15:49:25 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 16:32:36 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:40:20 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,5 @@ AForm *Intern::makeForm(std::string const &formName, std::string const &target)
 			return (this->*formFuncs[i])(target);
 		}
 	}
-	
-	std::cout << "Form type does not exist..." << std::endl;
-	return NULL;
+	throw std::runtime_error("Form type does not exist...");
 }

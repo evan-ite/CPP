@@ -13,12 +13,12 @@
 #include "PresidentialPardonForm.hpp"
 
 // Constructors
-PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", 72, 45), _target("default")
+PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", 25, 5), _target("default")
 {
 	std::cout << "\e[0;33mDefault Constructor called of PresidentialPardonForm\e[0m" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("PresidentialPardonForm", 72, 45), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("PresidentialPardonForm", 25, 5), _target(target)
 {
 	std::cout << "\e[0;33mField Constructor called of PresidentialPardonForm\e[0m" << std::endl;
 }

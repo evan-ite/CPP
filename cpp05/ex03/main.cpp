@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 20:41:35 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/07/04 16:35:24 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:43:48 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ int main (void)
 	{
 		std::cout << "--------- Intern ----------" << std::endl;
 		try {
-			Bureaucrat bureaucrat("Queen", 15);
+			Bureaucrat bureaucrat("Queen", 150);
 			Intern intern;
 			
-			AForm *shrub = intern.makeForm("ShrubberyCreationForm", "bro");
-			
-			bureaucrat.signForm(*shrub);
-			bureaucrat.executeForm(*shrub);
-			delete shrub;
-		} catch (AForm::FormException &e) {
-			std::cout << e.what() << std::endl;
-		} catch (Bureaucrat::GradeException &e) {
+			// AForm *form = intern.makeForm("ShrubberyCreationForm", "bro");
+			// AForm *form = intern.makeForm("RobotomyRequestForm", "bro");
+			AForm *form = intern.makeForm("PresidentialPardonForm", "bro");
+
+			bureaucrat.signForm(*form);
+			bureaucrat.executeForm(*form);
+			delete form;
+		} catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 	}

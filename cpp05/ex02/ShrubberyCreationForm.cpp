@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:43:41 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 15:42:27 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:23:36 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target):
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy): 
-	AForm(copy),
-	_target("copy")
+	AForm(copy)
 {
+	_target = "copy_" + copy._target;
 	std::cout << "\e[0;33mCopy Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
 }
 
@@ -57,8 +57,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 	
 	std::ofstream ofs((_target + "_shrubbery").c_str());
 	if (!ofs.is_open()) {
-		std::cerr << "Failed to create the file." << std::endl;
-		return;
+		throw std::runtime_error("Failed to create the Shrubbery file.");
 	}
 
 	ofs << "       _-_\n";

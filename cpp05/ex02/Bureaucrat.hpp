@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:43:27 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 15:21:37 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:16:07 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class AForm;
 class Bureaucrat
 {
 	private:
-		std::string _name;
-		int _grade;
+		const std::string	_name;
+		int					_grade;
 
 	public:
 		// Constructors

@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:42:42 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 13:42:43 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:01:17 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Bureaucrat
 {
 	private:
-		std::string _name;
-		int _grade;
+		const std::string	_name;
+		int 				_grade;
 
 	public:
 		// Constructors

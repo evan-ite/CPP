@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 20:41:35 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/07/04 15:44:30 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:35:46 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,12 @@ int main (void)
 	{
 		std::cout << "--------- Shrubbery ----------" << std::endl;
 		try {
-			Bureaucrat bureaucrat("Queen", 150);
+			Bureaucrat bureaucrat("Queen", 145);
 			ShrubberyCreationForm shrub("cute");
 			
 			bureaucrat.signForm(shrub);
 			bureaucrat.executeForm(shrub);
-		} catch (AForm::FormException &e) {
-			std::cout << e.what() << std::endl;
-		} catch (Bureaucrat::GradeException &e) {
+		} catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 	}
@@ -40,22 +38,20 @@ int main (void)
 			
 			bureaucrat.signForm(rob);
 			bureaucrat.executeForm(rob);
-		} catch(AForm::FormException &e) {
-			std::cout << e.what() << std::endl;
-		} catch (Bureaucrat::GradeException &e) {
+		} catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 	}
 	{
 		std::cout << "--------- Presidential ----------" << std::endl;
 		try {
-			Bureaucrat bureaucrat("Queen", 5);
+			Bureaucrat bureaucrat("Queen", 6);
 			PresidentialPardonForm pres("cutest");
 			
 			bureaucrat.incrementGrade();
-			// pres.BeSigned(bureaucrat);
+			bureaucrat.signForm(pres);
 			bureaucrat.executeForm(pres);
-		} catch (Bureaucrat::GradeException &e) {
+		} catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
 	}

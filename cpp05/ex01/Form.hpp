@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:43:00 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 13:43:01 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:08:01 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Bureaucrat;
 class Form
 {
 	private:
-		const std::string _name;
-		bool _signed;
-		const int _signGrade;
-		const int _execGrade;
+		const std::string	_name;
+		bool 				_signed;
+		const int			_signGrade;
+		const int			_execGrade;
 
 		Form();
 	public:
