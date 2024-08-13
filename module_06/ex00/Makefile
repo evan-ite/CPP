@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
+#    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/12 20:31:12 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/08/13 17:12:22 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main
+FILES		= Converter main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		=
+HFILES		= Converter
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:
