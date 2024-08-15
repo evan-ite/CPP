@@ -6,11 +6,11 @@
 #    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/15 16:44:18 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/15 17:14:27 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= convert
+NAME		= serial
 
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= Converter ConverterUtils main
+FILES		= Serializer main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		= Converter
+HFILES		= Serializer
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:

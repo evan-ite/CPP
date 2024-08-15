@@ -3,7 +3,7 @@
 int main (int argc, char **argv)
 {
 	if (argc != 2) {
-		std::cerr << "Usage: \n\t./convert [value]";
+		std::cerr << "Usage:\t./convert [value]" << std::endl;
 		return (1);
 	}
 
