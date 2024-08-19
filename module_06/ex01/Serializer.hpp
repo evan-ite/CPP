@@ -6,22 +6,22 @@
 
 struct Data
 {
-    std::string name;
-    int         age;
+	std::string name;
+	int         age;
 };
 
-class Serializer 
+class Serializer
 {
-    public: 
-    ~Serializer();
+	public:
+	~Serializer();
 
-    static uintptr_t    serialize(Data* ptr);
-    static Data*        deserialize(uintptr_t raw);
+	static uintptr_t	serialize(Data* ptr);
+	static Data*		deserialize(uintptr_t raw);
 
-    private:
-    Serializer();
-    Serializer(const Serializer &copy);
-    Serializer &operator=(const Serializer &assign);
+	private:
+	Serializer();
+	Serializer(const Serializer &copy);
+	Serializer &operator=(const Serializer &assign);
 };
 
 #endif
