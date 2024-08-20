@@ -6,11 +6,11 @@
 #    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/20 09:02:47 by elisevanite      ###   ########.fr        #
+#    Updated: 2024/08/20 09:21:04 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= iter
+NAME		= array
 
 CC			= g++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
