@@ -6,7 +6,7 @@
 #    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/06/20 15:46:35 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/20 14:21:37 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@$(CC) $(OBJ) -o $(NAME)
-	@printf "$(GREEN)Executable ready.$(RESET)\n"
+	@printf "$(GREEN)Executable ready: ./$(NAME)$(RESET)\n"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)

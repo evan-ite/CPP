@@ -1,15 +1,5 @@
 #include "Serializer.hpp"
 
-static uintptr_t    serialize(Data* ptr)
-{
-    return reinterpret_cast<uintptr_t>(ptr);
-}
-
-static Data*        deserialize(uintptr_t raw)
-{
-    
-}
-
 Serializer::Serializer() {}
 
 uintptr_t	Serializer::serialize(Data* ptr)
