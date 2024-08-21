@@ -61,7 +61,7 @@ class Array
 
         const T& operator[](std::size_t index) const
         {
-            if (index >= size)
+            if (index >= _size)
                 throw std::exception();
             
             return _elements[index];

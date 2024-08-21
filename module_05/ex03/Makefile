@@ -6,13 +6,13 @@
 #    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/20 14:21:37 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/21 11:21:42 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= ex03
 
-CC			= g++
+CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
