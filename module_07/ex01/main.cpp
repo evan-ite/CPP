@@ -1,8 +1,9 @@
 #include "iter.hpp"
 
-void	funcInt(int &i)
+void	funcInt(int const &i)
 {
-	i++;
+	// i++;
+	std::cout << "bla " << i << std::endl;
 }
 
 void	funcStr(std::string &str)
@@ -14,7 +15,7 @@ int main(void)
 {
 	std::cout << " --- Int test --- " << std::endl;
 
-	int array[] = {1,2,3};
+	int const array[] = {1,2,3};
 	size_t len = sizeof(array) / sizeof(array[0]);
 
 	iter(array, len, funcInt);
