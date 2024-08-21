@@ -4,19 +4,19 @@
 HumanB::HumanB(std::string name) : _name(name)
 {
 	_weaponType = NULL;
-	std::cout << "\e[0;33mFields Constructor called of HumanB\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of HumanB\033[0m" << std::endl;
 }
 
 HumanB::HumanB(const HumanB &copy) : _name(copy._name)
 {
 	*_weaponType = copy.getType();
-	std::cout << "\e[0;33mCopy Constructor called of HumanB\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of HumanB\033[0m" << std::endl;
 }
 
 // Destructor
 HumanB::~HumanB()
 {
-	std::cout << "\e[0;31mDestructor called of HumanB\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of HumanB\033[0m" << std::endl;
 }
 
 // Operators

@@ -3,17 +3,17 @@
 // Constructors
 HumanA::HumanA(std::string name, Weapon &type) : _name(name), _weaponType(type)
 {
-	std::cout << "\e[0;33mFields Constructor called of HumanA\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of HumanA\033[0m" << std::endl;
 }
 HumanA::HumanA(const HumanA &copy) : _name(copy._name), _weaponType(copy._weaponType)
 {
-	std::cout << "\e[0;33mCopy Constructor called of HumanA\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of HumanA\033[0m" << std::endl;
 }
 
 // Destructor
 HumanA::~HumanA()
 {
-	std::cout << "\e[0;31mDestructor called of HumanA\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of HumanA\033[0m" << std::endl;
 }
 
 

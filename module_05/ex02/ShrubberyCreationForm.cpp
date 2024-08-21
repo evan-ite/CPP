@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:43:41 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/08/09 11:23:36 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,28 @@ ShrubberyCreationForm::ShrubberyCreationForm():
 	AForm("ShrubberyCreationForm", 145, 137),
 	_target("default")
 {
-	std::cout << "\e[0;33mDefault Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of ShrubberyCreationForm\033[0m" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): 
 	AForm("ShrubberyCreationForm", 145, 137),
 	_target(target)
 {
-	std::cout << "\e[0;33mField Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mField Constructor called of ShrubberyCreationForm\033[0m" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy): 
 	AForm(copy)
 {
 	_target = "copy_" + copy._target;
-	std::cout << "\e[0;33mCopy Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of ShrubberyCreationForm\033[0m" << std::endl;
 }
 
 
 // Destructor
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << "\e[0;31mDestructor called of ShrubberyCreationForm\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of ShrubberyCreationForm\033[0m" << std::endl;
 }
 
 

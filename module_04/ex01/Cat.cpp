@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:59:28 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/24 14:09:01 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 // Constructors
 Cat::Cat() : Animal("Cat") {
 	_brain = new Brain();
-	std::cout << "\e[0;33mDefault Constructor called of Cat\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Cat\033[0m" << std::endl;
 }
 
 Cat::Cat(const Cat &copy) {
-	std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Cat\033[0m" << std::endl;
 	if (this != &copy) {
 		setType(copy.getType());
 		_brain = new Brain(*(copy.getBrain()));
@@ -29,13 +29,13 @@ Cat::Cat(const Cat &copy) {
 // Destructor
 Cat::~Cat() {
 	delete _brain;
-	std::cout << "\e[0;31mDestructor called of Cat\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Cat\033[0m" << std::endl;
 }
 
 
 // Operators
 Cat& Cat::operator=(const Cat &assign) {
-	std::cout << "\e[0;33mAssignment operator called of Cat\e[0m" << std::endl;
+	std::cout << "\033[0;33mAssignment operator called of Cat\033[0m" << std::endl;
 	if (this != &assign) {
 		Animal::operator=(assign);
 		delete _brain;

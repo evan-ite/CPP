@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:41:56 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 15:42:44 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,26 @@
 RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45), _target("default")
 {
 	std::srand(std::time(0));
-	std::cout << "\e[0;33mDefault Constructor called of RobotomyRequestForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of RobotomyRequestForm\033[0m" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target): AForm("RobotomyRequestForm", 72, 45), _target(target)
 {
 	std::srand(std::time(0));
-	std::cout << "\e[0;33mField Constructor called of RobotomyRequestForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mField Constructor called of RobotomyRequestForm\033[0m" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy): AForm(copy), _target("copy")
 {
 	std::srand(std::time(0));
-	std::cout << "\e[0;33mCopy Constructor called of RobotomyRequestForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of RobotomyRequestForm\033[0m" << std::endl;
 }
 
 
 // Destructor
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << "\e[0;31mDestructor called of RobotomyRequestForm\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of RobotomyRequestForm\033[0m" << std::endl;
 }
 
 

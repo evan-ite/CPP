@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:42:58 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/07/04 13:42:59 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Form::Form(const Form &copy):
 	_signGrade(copy.getSignGrade()),
 	_execGrade(copy.getExecGrade())
 {
-	std::cout << "\e[0;33mCopy Constructor called of Form\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Form\033[0m" << std::endl;
 }
 
 Form::Form(std::string name, const int signGrade, const int execGrade):
@@ -40,14 +40,14 @@ Form::Form(std::string name, const int signGrade, const int execGrade):
 		throw Form::GradeTooHighException();
 	else if (signGrade > 150 || execGrade > 150)
 		throw Form::GradeTooLowException();
-	std::cout << "\e[0;33mFields Constructor called of Form\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of Form\033[0m" << std::endl;
 }
 
 
 // Destructor
 Form::~Form()
 {
-	std::cout << "\e[0;31mDestructor called of Form\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Form\033[0m" << std::endl;
 }
 
 

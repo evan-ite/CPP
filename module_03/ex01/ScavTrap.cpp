@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+        */
+/*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:02:42 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/11 11:25:26 by elisevanite      ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(const std::string& name): ClapTrap(name, 100, 50, 20) {
-	std::cout << "\e[0;33mConstructor of ScavTrap " << name << " is called!\e[0m" << std::endl;
+	std::cout << "\033[0;33mConstructor of ScavTrap " << name << " is called!\033[0m" << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "\e[0;31mDestructor of ScavTrap " << getName() << " is called\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor of ScavTrap " << getName() << " is called\033[0m" << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target) {

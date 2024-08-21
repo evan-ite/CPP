@@ -6,26 +6,26 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:17:17 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/25 10:15:30 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
 Ice::Ice() : AMateria("ice") {
-	std::cout << "\e[0;33mDefault Constructor called of Ice\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Ice\033[0m" << std::endl;
 }
 
 Ice::Ice(const Ice &copy) : AMateria(copy) {
-	std::cout << "\e[0;33mCopy Constructor called of Ice\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Ice\033[0m" << std::endl;
 }
 
 Ice::Ice(std::string const type) : AMateria(type) {
-	std::cout << "\e[0;33mDefault Constructor called of Ice\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Ice\033[0m" << std::endl;
 }
 
 Ice::~Ice() {
-	std::cout << "\e[0;31mDestructor called of Ice\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Ice\033[0m" << std::endl;
 }
 
 Ice & Ice::operator=(const Ice &assign) {

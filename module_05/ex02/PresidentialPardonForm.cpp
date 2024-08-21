@@ -15,24 +15,24 @@
 // Constructors
 PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", 25, 5), _target("default")
 {
-	std::cout << "\e[0;33mDefault Constructor called of PresidentialPardonForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of PresidentialPardonForm\033[0m" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("PresidentialPardonForm", 25, 5), _target(target)
 {
-	std::cout << "\e[0;33mField Constructor called of PresidentialPardonForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mField Constructor called of PresidentialPardonForm\033[0m" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy): AForm(copy), _target("copy")
 {
-	std::cout << "\e[0;33mCopy Constructor called of PresidentialPardonForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of PresidentialPardonForm\033[0m" << std::endl;
 }
 
 
 // Destructor
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << "\e[0;31mDestructor called of PresidentialPardonForm\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of PresidentialPardonForm\033[0m" << std::endl;
 }
 
 

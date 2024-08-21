@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+        */
+/*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:03:01 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/11 13:02:00 by elisevanite      ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(std::string name) {
 	_hitPoints = 10;
 	_energy = 10;
 	_damage = 0;
-	std::cout << "\e[0;33mFields Constructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of ClapTrap\033[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name, int hit, int energy, int damage) {
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(std::string name, int hit, int energy, int damage) {
 	_hitPoints = hit;
 	_energy = energy;
 	_damage = damage;
-	std::cout << "\e[0;33mFields Constructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of ClapTrap\033[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy) {
@@ -34,13 +34,13 @@ ClapTrap::ClapTrap(const ClapTrap &copy) {
 	_hitPoints = copy.getHitPoints();
 	_energy = copy.getEnergy();
 	_damage = copy.getDamage();
-	std::cout << "\e[0;33mCopy Constructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of ClapTrap\033[0m" << std::endl;
 }
 
 
 // Destructor
 ClapTrap::~ClapTrap() {
-	std::cout << "\e[0;31mDestructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of ClapTrap\033[0m" << std::endl;
 }
 
 

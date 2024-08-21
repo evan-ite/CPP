@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 15:49:25 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/08/09 11:40:20 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 // Constructors
 Intern::Intern()
 {
-	std::cout << "\e[0;33mDefault Constructor called of Intern\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Intern\033[0m" << std::endl;
 }
 
 Intern::Intern(const Intern &copy)
 {
 	(void)copy;
-	std::cout << "\e[0;33mCopy Constructor called of Intern\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Intern\033[0m" << std::endl;
 }
 
 
 // Destructor
 Intern::~Intern()
 {
-	std::cout << "\e[0;31mDestructor called of Intern\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Intern\033[0m" << std::endl;
 }
 
 

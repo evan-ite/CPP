@@ -5,14 +5,14 @@ MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
 		_storage[i] = NULL;
-	std::cout << "\e[0;33mDefault Constructor called of MateriaSource\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of MateriaSource\033[0m" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource &copy)
 {
 	for (int i = 0; i < 4; i++)
 		_storage[i] = copy.getStorage(i);
-	std::cout << "\e[0;33mCopy Constructor called of MateriaSource\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of MateriaSource\033[0m" << std::endl;
 }
 
 // Destructor
@@ -20,7 +20,7 @@ MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
 		delete _storage[i];
-	std::cout << "\e[0;31mDestructor called of MateriaSource\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of MateriaSource\033[0m" << std::endl;
 }
 
 

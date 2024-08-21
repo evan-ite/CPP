@@ -2,6 +2,10 @@
 # define EASYFIND_HPP
 
 # include <algorithm>
+# include <vector>
+# include <list>
+# include <deque>
+# include <iostream>
 
 template <typename T>
 typename T::iterator easyfind(T &container, int n)

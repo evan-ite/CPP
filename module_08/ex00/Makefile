@@ -6,7 +6,7 @@
 #    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/21 12:24:23 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,13 +22,13 @@ FILES		= main
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		= Array
+HFILES		= easyfind
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:
-GREEN		=	\e[92;5;118m
-YELLOW		=	\e[93;5;226m
-RESET		=	\e[0m
+GREEN		=	\033[92;5;118m
+YELLOW		=	\033[93;5;226m
+RESET		=	\033[0m
 
 .PHONY: all clean fclean re bonus norm
 

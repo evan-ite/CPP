@@ -4,26 +4,26 @@
 Zombie::Zombie()
 {
 	_name = "no name";
-	std::cout << "\e[0;33mDefault Constructor called of Zombie " << _name << "\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Zombie " << _name << "\033[0m" << std::endl;
 }
 
 Zombie::Zombie(const Zombie &copy)
 {
 	_name = copy.getName();
-	std::cout << "\e[0;33mCopy Constructor called of Zombie " << _name << "\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Zombie " << _name << "\033[0m" << std::endl;
 }
 
 Zombie::Zombie(std::string name)
 {
 	_name = name;
-	std::cout << "\e[0;33mFields Constructor called of Zombie " << _name << "\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of Zombie " << _name << "\033[0m" << std::endl;
 }
 
 
 // Destructor
 Zombie::~Zombie()
 {
-	std::cout << "\e[0;31mDestructor called of Zombie " << _name << "\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Zombie " << _name << "\033[0m" << std::endl;
 }
 
 

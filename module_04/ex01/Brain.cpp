@@ -5,21 +5,21 @@ Brain::Brain()
 {
 	for (int i = 0; i < 100; i++)
 		_ideas[i] = "Eureka " + intToString(i);
-	std::cout << "\e[0;33mDefault Constructor called of Brain\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Brain\033[0m" << std::endl;
 }
 
 Brain::Brain(const Brain &copy)
 {
 	for (int i = 0; i < 100; i++)
 		_ideas[i] = copy.getIdea(i);
-	std::cout << "\e[0;33mCopy Constructor called of Brain\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Brain\033[0m" << std::endl;
 }
 
 
 
 // Destructor
 Brain::~Brain() {
-	std::cout << "\e[0;31mDestructor called of Brain\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Brain\033[0m" << std::endl;
 }
 
 

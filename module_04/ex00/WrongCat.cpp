@@ -14,12 +14,12 @@
 
 // Constructors
 WrongCat::WrongCat() : WrongAnimal("WrongCat") {
-	std::cout << "\e[0;33mDefault Constructor called of WrongCat\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of WrongCat\033[0m" << std::endl;
 }
 
 // Destructor
 WrongCat::~WrongCat() {
-	std::cout << "\e[0;31mDestructor called of WrongCat\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of WrongCat\033[0m" << std::endl;
 }
 
 

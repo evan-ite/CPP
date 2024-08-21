@@ -6,7 +6,7 @@
 #    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:25 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/21 11:21:42 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,9 @@ OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
 HEADER		= Contact.hpp PhoneBook.hpp
 
 #Colors:
-GREEN		=	\e[92;5;118m
-YELLOW		=	\e[93;5;226m
-RESET		=	\e[0m
+GREEN		=	\033[92;5;118m
+YELLOW		=	\033[93;5;226m
+RESET		=	\033[0m
 
 .PHONY: all clean fclean re bonus norm
 

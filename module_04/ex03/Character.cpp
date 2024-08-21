@@ -18,7 +18,7 @@ Character::Character()
 	_name = "no name";
 	for (int i = 0; i < 4; i++)
 		_equipment[i] = NULL;
-	std::cout << "\e[0;33mDefault Constructor called of Character\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Character\033[0m" << std::endl;
 }
 
 
@@ -27,7 +27,7 @@ Character::Character(std::string name)
 	_name = name;
 	for (int i = 0; i < 4; i++)
 		_equipment[i] = NULL;
-	std::cout << "\e[0;33mFields Constructor called of Character\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of Character\033[0m" << std::endl;
 }
 
 Character::Character(const Character &copy)
@@ -37,7 +37,7 @@ Character::Character(const Character &copy)
 		delete _equipment[i];
 	for (int i = 0; i < 4; i++)
 		_equipment[i] = copy.getEquipment(i);
-	std::cout << "\e[0;33mCopy Constructor called of Character\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Character\033[0m" << std::endl;
 }
 
 
@@ -46,7 +46,7 @@ Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
 		delete _equipment[i];
-	std::cout << "\e[0;31mDestructor called of Character\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Character\033[0m" << std::endl;
 }
 
 

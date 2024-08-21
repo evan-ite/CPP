@@ -16,26 +16,26 @@
 WrongAnimal::WrongAnimal()
 {
 	_type = "WrongAnimal";
-	std::cout << "\e[0;33mDefault Constructor called of WrongAnimal\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of WrongAnimal\033[0m" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
 	_type = copy.getType();
-	std::cout << "\e[0;33mCopy Constructor called of WrongAnimal\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of WrongAnimal\033[0m" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(std::string type)
 {
 	_type = type;
-	std::cout << "\e[0;33mFields Constructor called of WrongAnimal\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of WrongAnimal\033[0m" << std::endl;
 }
 
 
 // Destructor
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "\e[0;31mDestructor called of WrongAnimal\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of WrongAnimal\033[0m" << std::endl;
 }
 
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+        */
+/*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:59:41 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/14 12:01:14 by elisevanite      ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,26 @@
 Animal::Animal()
 {
 	_type = "Animal";
-	std::cout << "\e[0;33mDefault Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Animal\033[0m" << std::endl;
 }
 
 Animal::Animal(const Animal &copy)
 {
 	*this = copy;
-	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Animal\033[0m" << std::endl;
 }
 
 Animal::Animal(std::string type)
 {
 	_type = type;
-	std::cout << "\e[0;33mFields Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of Animal\033[0m" << std::endl;
 }
 
 
 // Destructor
 Animal::~Animal()
 {
-	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Animal\033[0m" << std::endl;
 }
 
 

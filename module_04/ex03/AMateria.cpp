@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:17:34 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/24 15:00:54 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 // Constructors
 AMateria::AMateria() {
 	_type = "";
-	std::cout << "\e[0;33mDefault Constructor called of AMateria\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of AMateria\033[0m" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &copy) {
 	_type = copy.getType();
-	std::cout << "\e[0;33mCopy Constructor called of AMateria\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of AMateria\033[0m" << std::endl;
 }
 
 AMateria::~AMateria() {
-	std::cout << "\e[0;31mDestructor called of AMateria\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of AMateria\033[0m" << std::endl;
 }
 
 AMateria::AMateria(std::string const type) {
 	_type = type;
-	std::cout << "\e[0;33mFields Constructor called of AMateria\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of AMateria\033[0m" << std::endl;
 }
 
 

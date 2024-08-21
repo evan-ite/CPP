@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:42:29 by evan-ite          #+#    #+#             */
-/*   Updated: 2024/08/09 11:35:09 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ AForm::AForm(const AForm &copy):
 	_signGrade(copy.getSignGrade()),
 	_execGrade(copy.getExecGrade())
 {
-	std::cout << "\e[0;33mCopy Constructor called of AForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of AForm\033[0m" << std::endl;
 }
 
 AForm::AForm(const std::string &name, const int signGrade, const int execGrade):
@@ -40,14 +40,14 @@ AForm::AForm(const std::string &name, const int signGrade, const int execGrade):
 		throw AForm::GradeTooHighException();
 	else if (signGrade > 150 || execGrade > 150)
 		throw AForm::GradeTooLowException();
-	std::cout << "\e[0;33mFields Constructor called of AForm\e[0m" << std::endl;
+	std::cout << "\033[0;33mFields Constructor called of AForm\033[0m" << std::endl;
 }
 
 
 // Destructor
 AForm::~AForm()
 {
-	std::cout << "\e[0;31mDestructor called of AForm\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of AForm\033[0m" << std::endl;
 }
 
 

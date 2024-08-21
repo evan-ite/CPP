@@ -6,7 +6,7 @@
 /*   By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:59:41 by elisevanite       #+#    #+#             */
-/*   Updated: 2024/06/24 13:33:38 by evan-ite         ###   ########.fr       */
+/*   Updated: 2024/08/21 16:43:38 by evan-ite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 // Constructors
 Animal::Animal() : _type("Animal") {
-	std::cout << "\e[0;33mDefault Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;33mDefault Constructor called of Animal\033[0m" << std::endl;
 }
 
 Animal::Animal(const std::string type) : _type(type) {
-	std::cout << "\e[0;33mField Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;33mField Constructor called of Animal\033[0m" << std::endl;
 }
 
 Animal::Animal(const Animal &copy) {
 	_type = copy.getType();
-	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;33mCopy Constructor called of Animal\033[0m" << std::endl;
 }
 
 
 // Destructor
 Animal::~Animal() {
-	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
+	std::cout << "\033[0;31mDestructor called of Animal\033[0m" << std::endl;
 }
 
 
