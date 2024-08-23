@@ -2,14 +2,10 @@
 # define SPAN_HPP
 
 # include <iostream>
-# include <ostream>
-# include <cstdarg>
-# include <stdarg.h>
-# include <cstdlib>
 # include <limits>
 # include <vector>
 # include <algorithm>
-
+# include <stdint.h>
 
 class Span
 {
@@ -21,14 +17,14 @@ class Span
 
 		Span& operator=(const Span &assign);
 
-		void	addNumber(int number);
-		void	addNumbers(int count, ...);
-		int		shortestSpan();
-		int		longestSpan();
+		void		addNumber(int number);
+		void		addNumbers(const std::vector<int>& numbers);
+		long		shortestSpan() const;
+		long		longestSpan() const;
 
 	private:
-		unsigned int        _n;
-		std::vector<int>    _array;
+		unsigned int		_n;
+		std::vector<int>	_array;
 };
 
 #endif
