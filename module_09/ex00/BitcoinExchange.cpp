@@ -1,14 +1,5 @@
 #include "BitcoinExchange.hpp"
 
-BTC::BTC(const std::string &dataFile)
-{
-	// check input valid file && open file
-
-	// read line
-		// add first string to map.key
-		// convert second string to int and add to map.value
-}
-
 BTC::BTC(const BTC &copy): _data(copy._data)
 {}
 
@@ -20,6 +11,24 @@ BTC& BTC::operator=(const BTC &assign)
 	if (this != &assign)
 		this->_data = assign._data;
 	return *this;
+}
+
+BTC::BTC(const std::string &dataFile)
+{
+	std::ifstream file(dataFile);
+    if (!file.is_open())
+        throw std::runtime_error("Error loading data file");
+
+	std::string line;
+    while (std::getline(file, line)) 
+		this->addPairToData(line);
+
+	file.close();
+}
+
+void	BTC::addPairToData(std::string &line)
+{
+	
 }
 
 void	BTC::checkBTCValue(const std::string &inputFile)

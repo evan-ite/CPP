@@ -2,6 +2,7 @@
 # define BITCOINEXCHANGE_HPP
 
 # include <iostream>
+# include <fstream>
 # include <map>
 
 # define DATAFILE "data.csv"
@@ -18,6 +19,8 @@ class BTC
 		void	checkBTCValue(const std::string &inputFile);
 
 	private:
+		void	addPairToData(std::string &line);
+
 		std::map<std::string, int> _data; 
 
 };
