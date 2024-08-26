@@ -10,7 +10,7 @@
 # include <map>
 
 # define DATAFILE "data.csv"
-# define CURRENT_YEAR 2025
+# define CURRENT_YEAR 2024
 
 class BTC
 {
@@ -42,7 +42,8 @@ class BTC
 
 };
 
-long	stringToInt(const std::string& str);
-void	trimWhiteSpace(std::string &str);
+double			stringToDouble(const std::string& str);
+void			trimWhiteSpace(std::string &str);
+std::string		getDecimalPlaces(double value);
 
 #endif

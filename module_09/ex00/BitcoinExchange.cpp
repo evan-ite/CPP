@@ -24,10 +24,6 @@ BTC::BTC(const std::string &dataFile)
     while (std::getline(file, line)) 
 		this->addPairToData(line);
 
-	// for (std::map<std::string, double>::const_iterator it = _data.begin(); it != _data.end(); ++it) {
-	// 	std::cout << "Date: " << it->first << ", Exchange Rate: " << it->second << std::endl;
-	// }
-
 	file.close();
 }
 
@@ -45,7 +41,7 @@ void	BTC::addPairToData(std::string &line)
 	try
 	{
 		validDate(date);
-		double value = stringToInt(valueStr);
+		double value = stringToDouble(valueStr);
 		this->_data[date] = value;
 	}
 	catch(const std::exception& e)
@@ -67,10 +63,10 @@ void	BTC::validDate(std::string &date)
 		if (!std::isdigit(date[i]))
 			throw InputException("bad input => " + date);
 	}
-	int year = stringToInt(date.substr(0, 4));
-	int month = stringToInt(date.substr(5, 2));
-	int day = stringToInt(date.substr(8));
-	if (year > CURRENT_YEAR || month < 1 || month > 12 || day < 1 || day > 31)
+	int year = stringToDouble(date.substr(0, 4));
+	int month = stringToDouble(date.substr(5, 2));
+	int day = stringToDouble(date.substr(8));
+	if (year > (CURRENT_YEAR + 1) || month < 1 || month > 12 || day < 1 || day > 31)
 		throw InputException("incorrect date => " + date);
 }
 
@@ -78,7 +74,7 @@ void	BTC::checkBTCValue(const std::string &inputFile)
 {
 	std::ifstream file(inputFile.c_str());
 	if (!file.is_open())
-		throw std::runtime_error("Error loading data file");
+		throw std::runtime_error("Error loading input file");
 
 	std::string line;
 	std::getline(file, line);
@@ -99,7 +95,7 @@ void	BTC::execute(std::string &line)
 		if (!std::getline(iss, date, '|') || !std::getline(iss, valueStr))
 			throw InputException("bad input => " + line);
 		validDate(date);
-		int value = validValue(valueStr);
+		double value = validValue(valueStr);
 		std::map<std::string, double>::const_iterator it = this->_data.lower_bound(date);
 		if (it == this->_data.end() || it->first != date)
 		{
@@ -108,7 +104,7 @@ void	BTC::execute(std::string &line)
 			else
 				--it;
 		}
-		std::cout << date << " => " << value << " = " << value * it->second << std::endl;
+		std::cout << date << " => " << getDecimalPlaces(value) << " = " << getDecimalPlaces(value * it->second) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -118,55 +114,10 @@ void	BTC::execute(std::string &line)
 
 double	BTC::validValue(std::string &valueStr)
 {
-	long value = stringToInt(valueStr);
+	double value = stringToDouble(valueStr);
 	if (value < 0)
 		throw InputException("not a positive number.");
 	else if (value > 1000)
 		throw InputException("too large a number.");
 	return value;
-}
-
-BTC::InputException::InputException(const std::string& erCode) : _erCode(erCode) 
-{}
-
-BTC::InputException::~InputException() throw() {}
-
-const char* BTC::InputException::what() const throw() {
-    return _erCode.c_str();
-}
-
-long stringToInt(const std::string& str) 
-{
-    std::stringstream ss(str);
-    long result;
-    ss >> result;
-    if (ss.fail()) {
-        throw std::invalid_argument("Invalid integer format: " + str);
-    }
-    return result;
-}
-
-void	trimWhiteSpace(std::string &str)
-{
-	size_t start = str.find_first_not_of(" \t\n\r\f\v");
-	if (start != std::string::npos)
-		str = str.substr(start);
-	else
-		str.clear();
-
-	size_t end = str.find_last_not_of(" \t\n\r\f\v");
-	if (end != std::string::npos)
-		str = str.substr(0, end + 1);
-}
-
-// Function to determine the number of decimal places in a double
-int getDecimalPlaces(double value) {
-    std::ostringstream oss;
-    oss << std::fixed << value;
-    std::string str = oss.str();
-    size_t pos = str.find('.');
-    if (pos == std::string::npos) {
-        return 0;
-    }
-    return str.length() - pos - 1;
 }
