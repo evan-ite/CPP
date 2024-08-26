@@ -3,9 +3,14 @@
 
 # include <iostream>
 # include <fstream>
+# include <sstream>
+# include <string>
+# include <iostream>
+# include <iomanip>
 # include <map>
 
 # define DATAFILE "data.csv"
+# define CURRENT_YEAR 2025
 
 class BTC
 {
@@ -18,11 +23,26 @@ class BTC
 
 		void	checkBTCValue(const std::string &inputFile);
 
+		class InputException : public std::exception {
+			private:
+				std::string _erCode;
+			public:
+				InputException(const std::string& erCode);
+				~InputException() throw();
+				const char* what() const throw();
+		};
+
 	private:
 		void	addPairToData(std::string &line);
+		void	validDate(std::string &key);
+		double	validValue(std::string &value);
+		void	execute(std::string &line);
 
-		std::map<std::string, int> _data; 
+		std::map<std::string, double> _data; 
 
 };
+
+long	stringToInt(const std::string& str);
+void	trimWhiteSpace(std::string &str);
 
 #endif
