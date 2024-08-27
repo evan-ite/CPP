@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
+#    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/23 12:02:37 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/27 16:23:54 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= stack
+NAME		= PmergeMe
 
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -18,11 +18,11 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main 
+FILES		= main PmergeMe
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HFILES		= MutantStack
+HFILES		= PmergeMe
 HEADER		= $(HFILES:=.hpp)
 
 #Colors:
