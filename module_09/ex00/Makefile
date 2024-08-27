@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: evan-ite <evan-ite@student.42.fr>          +#+  +:+       +#+         #
+#    By: elisevaniterson <elisevaniterson@studen    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/06 15:25:17 by elisevanite       #+#    #+#              #
-#    Updated: 2024/08/26 11:33:33 by evan-ite         ###   ########.fr        #
+#    Updated: 2024/08/26 21:49:06 by elisevanite      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM			= rm -rf
 
 OBJDIR = .objFiles
 
-FILES		= main BitcoinExchange
+FILES		= main BitcoinExchange Utils
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))

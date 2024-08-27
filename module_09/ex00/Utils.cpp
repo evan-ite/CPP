@@ -1,7 +1,7 @@
 #include "BitcoinExchange.hpp"
 
 
-BTC::InputException::InputException(const std::string& erCode) : _erCode(erCode) 
+BTC::InputException::InputException(const std::string& erCode) : _erCode(erCode)
 {}
 
 BTC::InputException::~InputException() throw() {}
@@ -10,15 +10,15 @@ const char* BTC::InputException::what() const throw() {
     return _erCode.c_str();
 }
 
-double stringToDouble(const std::string& str) 
+double stringToDouble(const std::string& str)
 {
-    std::stringstream ss(str);
-    double result;
-    ss >> result;
-    if (ss.fail()) {
-        throw std::invalid_argument("Invalid integer format: " + str);
-    }
-    return result;
+	std::stringstream ss(str);
+	double result;
+	ss >> result;
+	if (ss.fail()) {
+		throw std::invalid_argument("invalid value => " + str);
+	}
+	return result;
 }
 
 void	trimWhiteSpace(std::string &str)
@@ -34,7 +34,7 @@ void	trimWhiteSpace(std::string &str)
 		str = str.substr(0, end + 1);
 }
 
-std::string getDecimalPlaces(double value) 
+std::string getDecimalPlaces(double value)
 {
     std::ostringstream oss;
     oss << std::fixed << value;
@@ -49,6 +49,6 @@ std::string getDecimalPlaces(double value)
 		if (str[str.size() - 1] == '.')
 			str.erase(str.size() - 1);
 	}
-    
+
 	return str;
 }
