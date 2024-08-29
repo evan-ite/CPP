@@ -7,6 +7,7 @@
 # include <vector>
 # include <list>
 # include <ctime>
+# include <limits>
 
 class PmergeMe
 {
